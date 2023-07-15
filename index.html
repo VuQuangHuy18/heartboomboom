@@ -11,8 +11,9 @@
       height: 100%;
       padding: 0;
       margin: 0;
-      background: url('img1.jpg');
-      background-size: auto;
+    
+     
+      background-size: cover;
       box-sizing: border-box;
       background-repeat: no-repeat;
       /* Không lặp lại hình ảnh */
@@ -366,7 +367,10 @@
         clearInterval(countdownInterval);
         countdownElement.innerHTML = "0.1";
         buttonContainer.removeChild(button);
-        textContainer.innerText = 'Tiếc ghê, nhưng tớ sẽ mãi giành 0,1s cho cậu'
+        setTimeout(() =>
+        textContainer.innerText = 'Tiếc ghê, nhưng tớ sẽ mãi giành 0,1s cho cậu', 2000)
+        
+      
         setTimeout(() =>
           textContainer.innerText = 'Ngủ ngon nhé !!!', 4000)
 
@@ -379,10 +383,10 @@
   var backgroundContainer = document.getElementsByTagName("body")[0];
   var imageUrls = ["url('img1.jpg')", "url('img2.jpg')", "url('img3.jpg')", "url('img4.jpg')", "url('img5.jpg')", "url('img6.jpg')", "url('img7.jpg')", "url('img8.jpg')", "url('img9.jpg')"];
   var currentIndex1 = 0;
-  var delay1 = 4500; // Thời gian trễ giữa việc thay đổi background (tính bằng mili giây)
+  var delay1 = 4000; // Thời gian trễ giữa việc thay đổi background (tính bằng mili giây)
 
   function changeBackground() {
-    backgroundContainer.style = "background:" + imageUrls[currentIndex1]; +'cover';
+    backgroundContainer.style = "background-image:" + imageUrls[currentIndex1]; +'cover';
     currentIndex1 = (currentIndex1 + 1) % imageUrls.length;
 
     setTimeout(changeBackground, delay1);
