@@ -16,6 +16,22 @@
       background-size: cover;
       box-sizing: border-box;
       background-repeat: no-repeat;
+      background-image: "img1.jpg";
+      background-image: "img2.jpg";
+      background-image: "img3.jpg";
+
+      background-image: "img4.jpg";
+
+      background-image: "img5.jpg";
+
+      background-image: "img6.jpg";
+
+      background-image: "img7.jpg";
+
+      background-image: "img8.jpg";
+      background-image: "img9.jpg";
+
+
       /* Không lặp lại hình ảnh */
       background-position: center;
     }
@@ -363,17 +379,14 @@
       countdownDuration--;
       countdownElement.innerHTML = countdownDuration;
 
-      if (countdownDuration <= 0) {
+      if (countdownDuration <= 0.3) {
         clearInterval(countdownInterval);
         countdownElement.innerHTML = "0.1";
         buttonContainer.removeChild(button);
         setTimeout(() =>
-        textContainer.innerText = 'Tiếc ghê, nhưng tớ sẽ mãi giành 0,1s cho cậu', 2000)
-        
-      
+        textContainer.innerText = 'Tiếc ghê, nhưng tớ sẽ mãi giành 0,1s cho cậu', 3000)
         setTimeout(() =>
-          textContainer.innerText = 'Ngủ ngon nhé !!!', 4000)
-
+          textContainer.innerText = 'Ngủ ngon nhé !!!', 6000)
       }
     }, 1000); // Cập nhật đồng hồ đếm ngược mỗi giây
   }
